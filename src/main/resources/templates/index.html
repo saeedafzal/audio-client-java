@@ -11,11 +11,17 @@
     <body>
         <main>
             <nav>
-                <h3>Audio Client</h3>
+                <div class="nav-menu">
+                    <h3>Audio Client</h3>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <div id="yt-dlp-status"></div>
+                        <span id="yt-dlp-status-label">Checking for yt-dlp...</span>
+                    </div>
+                </div>
                 <button onclick="loadMusicDirectory()">Load Music Directory</button>
             </nav>
 
-            <div class="dashboard" id="dashboard"></div>
+            <div id="dashboard"></div>
 
             <footer>
                 <h4 id="current-title">-</h4>
