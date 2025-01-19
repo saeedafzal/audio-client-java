@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>Audio Client</title>
+
+        <link rel="stylesheet" href="styles/style.css" />
+    </head>
+    <body>
+        <main>
+            <nav>
+                <h3>Audio Client</h3>
+                <button onclick="loadMusicDirectory()">Load Music Directory</button>
+            </nav>
+
+            <div class="dashboard" id="dashboard"></div>
+
+            <footer>
+                <h4 id="current-title">-</h4>
+                <audio controls id="audio"></audio>
+            </footer>
+        </main>
+
+        <script src="scripts/script.js"></script>
+    </body>
+</html>

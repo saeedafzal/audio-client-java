@@ -1,0 +1,78 @@
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    line-height: 1.5;
+}
+
+h3, h4 {
+    margin: 0;
+}
+
+/* --- */
+button {
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+}
+
+/* --- */
+main {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- */
+nav {
+    background: #f1f5f9;
+    border-bottom: 1px solid #cbd5e1;
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- */
+.dashboard {
+    flex: 1;
+    padding: 1rem 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.item {
+    width: 70%;
+    text-align: center;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    &:hover, &.active {
+        background: #f1f5f9;
+        border-color: #cbd5e1;
+        border-radius: 0.5rem;
+    }
+}
+
+/* --- */
+footer {
+    background: #f1f5f9;
+    border-top: 1px solid #cbd5e1;
+    padding: 1rem;
+}
+
+audio {
+    width: 100%;
+    margin-top: 1rem;
+}
