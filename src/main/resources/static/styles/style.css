@@ -54,7 +54,13 @@ nav {
 }
 
 /* --- */
-#dashboard {
+.dashboard {
+    flex: 1;
+    margin: 0;
+    display: flex;
+}
+
+#audio-list {
     flex: 1;
     padding: 1rem 0;
     margin: 0;
@@ -70,11 +76,43 @@ nav {
     padding: 0.5rem 0.75rem;
     border: 1px solid transparent;
     cursor: pointer;
+    user-select: none;
 
     &:hover, &.active {
         background: #f1f5f9;
         border-color: #cbd5e1;
         border-radius: 0.5rem;
+    }
+}
+
+/* --- */
+#download-container {
+    /* TODO: Make this responsive */
+    width: 50%;
+    border-left: 1px solid #cbd5e1;
+
+    &.hidden {
+        display: none;
+    }
+
+    h3 {
+        text-align: center;
+        border-bottom: 1px solid #cbd5e1;
+        padding: 0.75rem 0;
+    }
+
+    ul {
+        list-style: none;
+        text-align: center;
+        padding: 0 0.25rem;
+    }
+
+    li {
+        font-weight: bold;
+
+        &.complete { color: green; }
+        &.progress { color: orange; }
+        &.failed { color: red; }
     }
 }
 

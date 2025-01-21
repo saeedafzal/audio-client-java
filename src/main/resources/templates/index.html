@@ -17,17 +17,34 @@
                         <div id="yt-dlp-status"></div>
                         <span id="yt-dlp-status-label">Checking for yt-dlp...</span>
                     </div>
+                    <button onclick="document.getElementById('dialog').showModal()">Download Audio</button>
                 </div>
-                <button onclick="loadMusicDirectory()">Load Music Directory</button>
+                <div class="nav-menu">
+                    <button onclick="loadMusicDirectory()">Load Music Directory</button>
+                    <button onclick="toggleDownloadList()">Toggle Download List</button>
+                </div>
             </nav>
 
-            <div id="dashboard"></div>
+            <div class="dashboard">
+                <div id="audio-list"></div>
+                <aside id="download-container">
+                    <h3>Download List</h3>
+                    <ul id="download-list"></ul>
+                </aside>
+            </div>
 
             <footer>
                 <h4 id="current-title">-</h4>
                 <audio controls id="audio"></audio>
             </footer>
         </main>
+
+        <dialog id="dialog">
+            <label for="url-input">Audio URL to download:</label>
+            <br />
+            <input id="url-input" placeholder="Enter url here..." />
+            <button onclick="downloadAudio(document.getElementById('url-input').value)">Download</button>
+        </dialog>
 
         <script src="scripts/script.js"></script>
     </body>
